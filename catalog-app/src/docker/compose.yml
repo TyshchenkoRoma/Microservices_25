@@ -1,0 +1,11 @@
+version: '2'
+services:
+  cfp-postgresql:
+    image: postgres:12.9-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432

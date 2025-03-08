@@ -14,6 +14,7 @@ Scope of the project:
 
 -Catalog application: holds online store product data in-memory from the product data set above.
 The application exposes REST API for retrieving products by ‘uniq_id’ and list of products by ‘sku’.
+DONE!!!
 
 -Inventory application: holds online store product availability data.
 Generate random availability status for each product from the product data set above and keep it in an in-memory data structure.

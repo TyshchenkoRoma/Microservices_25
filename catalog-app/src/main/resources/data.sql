@@ -17,6 +17,17 @@ CREATE TABLE product (
                           reviews TEXT
 );
 
+DROP TABLE IF EXISTS inventory;
+
+create table inventory
+(
+--     id                     int primary key,
+    uniq_id                varchar(200) ,
+--    sku                    varchar(1000) ,
+    available              boolean
+);
+
+
 COPY product
     FROM '/tmp/file.csv'
     WITH (FORMAT CSV, HEADER true, DELIMITER ',');

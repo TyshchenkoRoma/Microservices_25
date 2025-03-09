@@ -19,6 +19,7 @@ DONE!!!
 -Inventory application: holds online store product availability data.
 Generate random availability status for each product from the product data set above and keep it in an in-memory data structure.
 The application exposes REST API for retrieving product availability by a list of ‘uniq_id’.
+DONE!!!
 
 -Product application: returns product data to end-clients. The application exposes REST API
 for retrieving available products data by ‘uniq_id’ and by ‘sku’ (multiple products are returned).

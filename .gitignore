@@ -16,3 +16,4 @@ target/
 *.ear
 # Compiled class file
 *.class
+HELP.md

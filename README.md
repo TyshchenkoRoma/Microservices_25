@@ -30,9 +30,9 @@ and make a call to the inventory application to get product availability and fil
 
 -Gateway service: all call to service from user pass through it (calls between services don’t use gateway)
 
--Registry service: reg istering services.
+-Registry service: registering services.
 
-3 Use Openfeign for calls between services.
+3 Use Openfeign for calls between services.  DONE!
 4 Use resilience4j for protecting inter-component REST calls from the product application.
 The fallback behavior is supposed to result in ‘503 service unavailable’ in case of unavailability of any dependant services.
 Use synthetic delays (sleep time) in the inventory and catalog applications to increase response latency.
@@ -45,12 +45,4 @@ Questions on implementation to make sure that trainee understands how Gateway,
 Configuration server and registration service work in the capstone application.
 
 
-- add OPENFEIN куди додати ?
-- add interface
-- @FeignClient(value = "product-service", url = "http://localhost:8080/")
-  public interface ProductServiceClient {
-
-  @GetMapping("/products")
-  List<Products> getProducts();
-  }
 

@@ -10,7 +10,7 @@ import java.util.List;
 @FeignClient(url = "http://localhost:8080", name = "catalog")
 public interface CatalogClient {
 
-    @GetMapping("/catalog/byid")
+    @GetMapping("/catalog")
     Product getByUniqId(@RequestParam("uniqId") String uniqId);
 
     @GetMapping("/catalog/getbysku")

@@ -18,14 +18,15 @@ public class CatalogController {
     private CatalogService catalogService;
 
     @GetMapping
-    public Product getById(@RequestParam("uniqId") String uniqId) {
-
+    public Product getById(@RequestParam("uniqId") String uniqId) throws InterruptedException {
+        Thread.sleep(1000);
         return catalogService.getByUniqId(uniqId);
     }
 
     @GetMapping("/getbysku")
-    public List<Product> getBySku(@RequestParam("sku") String sku) {
-
+    public List<Product> getBySku(@RequestParam("sku") String sku) throws InterruptedException {
+        Thread.sleep(1000);
         return catalogService.getBySku(sku);
-    }}
+    }
+}
 

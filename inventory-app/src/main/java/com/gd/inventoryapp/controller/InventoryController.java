@@ -16,15 +16,16 @@ public class InventoryController {
     InventoryService inventoryService;
 
     @GetMapping("/getinv")
-    List<Inventory> getAvailability() {
+    List<Inventory> getAvailability() throws InterruptedException {
+        Thread.sleep(1000);
         inventoryService.fillRandomAvailability();
         return inventoryService.getByUniqId();
     }
 
     @GetMapping("/getinvbyid")
-    List<Inventory> getAvailability(@RequestParam("uniqIdList") List <String> uniqIdList) {
+    List<Inventory> getAvailability(@RequestParam("uniqIdList") List <String> uniqIdList) throws InterruptedException {
      //   inventoryService.fillRandomAvailability();
-
+        Thread.sleep(1000);
         return inventoryService.getListInventory(uniqIdList);
     }
 

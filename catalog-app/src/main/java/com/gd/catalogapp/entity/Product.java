@@ -19,32 +19,32 @@ public class Product {
 //   // @GenericGenerator(name = "native", strategy = "native")
 //    private Long id;
     @Id
-    @Column
-    private String uniq_id;
+    @Column(name = "uniq_id")
+    private String uniqId;
     @Column
     private String sku;
-    @Column
-    private String name_title;
+    @Column(name = "name_title")
+    private String nameTitle;
     @Column
     private String description;
-    @Column
-    private Double list_price;
-    @Column
-    private Double sale_price;
+    @Column(name = "list_price")
+    private Double listPrice;
+    @Column(name = "sale_price")
+    private Double salePrice;
     @Column
     private String category;
-    @Column
-    private String category_tree;
-    @Column
-    private String average_product_rating;
-    @Column
-    private String product_url;
-    @Column
-    private String product_image_urls;
+    @Column(name = "category_tree")
+    private String categoryTree;
+    @Column(name = "average_product_rating")
+    private String averageProductRating;
+    @Column(name = "product_url" )
+    private String productUrl;
+    @Column(name = "product_image_urls")
+    private String productImageUrls;
     @Column
     private String brand;
-    @Column
-    private Integer total_number_reviews;
+    @Column(name = "total_number_reviews")
+    private Integer totalNumberReviews;
     @Column
     private String reviews;
 //    @Column

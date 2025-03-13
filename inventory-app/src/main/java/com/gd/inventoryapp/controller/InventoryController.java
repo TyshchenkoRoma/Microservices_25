@@ -24,7 +24,6 @@ public class InventoryController {
 
     @GetMapping("/getinvbyid")
     List<Inventory> getAvailability(@RequestParam("uniqIdList") List <String> uniqIdList) throws InterruptedException {
-     //   inventoryService.fillRandomAvailability();
         Thread.sleep(1000);
         return inventoryService.getListInventory(uniqIdList);
     }

@@ -53,7 +53,7 @@ public class ProductController {
         List<Product> products = new ArrayList<>();
         List<String> avList = productService.getAvailId(idList);
         for (String id : avList) {
-            products.add(  catalogClient.getByUniqId(id));
+            products.add(catalogClient.getByUniqId(id));
         }
         return products;
     }
@@ -63,7 +63,7 @@ public class ProductController {
         List<Product> products = new ArrayList<>();
         List<String> avList = productService.getAvailId(productService.getAvailId(sku));
         for (String id : avList) {
-            products.add(  catalogClient.getByUniqId(id));
+            products.add(catalogClient.getByUniqId(id));
         }
         return products;
     }

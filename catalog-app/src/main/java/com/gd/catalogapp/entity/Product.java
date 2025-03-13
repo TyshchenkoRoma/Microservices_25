@@ -47,7 +47,6 @@ public class Product {
     private Integer totalNumberReviews;
     @Column
     private String reviews;
-//    @Column
-//    private Boolean available;
+
 }
 

@@ -27,8 +27,8 @@ public class ProductServiceImpl implements ProductService{
 
         List<Inventory> invList = new ArrayList<>();
         invList= inventoryClient.getListAvailability(id);
-        avL = inventoryClient.getListAvailability(id).stream().filter(s->s.getAvailable()==true)
-                .map(s->s.getUniqId()).collect(Collectors.toList());
+        avL = inventoryClient.getListAvailability(id).stream().filter(s-> s.getAvailable())
+                .map(Inventory::getUniqId).collect(Collectors.toList());
         return avL;
     }
 

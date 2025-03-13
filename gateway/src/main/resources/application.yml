@@ -17,14 +17,6 @@ spring:
                   name: prodService
                   fallbackUri: forward:/prod-fallback
 
-#              - CircuitBreaker=myCircuitBreaker
-#          - id: fallbackRoute
-#            uri: forward:/fallback
-#            predicates:
-#              - Path=/fallback
-
-
-
 resilience4j:
   circuitbreaker:
     instances:

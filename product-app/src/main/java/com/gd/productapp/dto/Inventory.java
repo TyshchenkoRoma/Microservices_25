@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Getter
 public class Inventory {
-   // private Long id;
     private String uniqId;
     private String sku;
     private Boolean available;

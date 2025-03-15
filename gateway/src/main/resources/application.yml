@@ -37,3 +37,14 @@ resilience4j:
     instances:
       prodService:
         timeout-duration: 3s
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, metrics, prometheus
+  prometheus:
+    metrics:
+      export:
+        enabled: true

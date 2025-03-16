@@ -1,0 +1,36 @@
+server:
+  port: 8083
+
+spring:
+  application.name: product-app
+  jackson.serialization.indent_output: true
+
+management:
+  endpoints.web.exposure.include:
+    - '*'
+  endpoint.health.show-details: always
+  health.circuitbreakers.enabled: true
+
+
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      registerHealthIndicator: true
+      slidingWindowSize: 5
+      minimumNumberOfCalls: 10  # defines the minimum number of requests required before the Circuit Breaker starts calculating the failure rate.
+# DONE!
+#      record-exceptions: # to identify which exceptions to record as failures.
+#        - java.io.IOException
+#        - java.util.concurrent.TimeoutException
+#        - java.lang.RuntimeException
+      #        Play with ‘failureRateThreshold’, ‘recordExceptions’, ‘minimumNumberOfCalls’
+
+      permittedNumberOfCallsInHalfOpenState: 5
+      automaticTransitionFromOpenToHalfOpenEnabled: true
+      waitDurationInOpenState: 5s
+      failureRateThreshold: 20  #  The Circuit Breaker opens if 50% or more of the requests fail within the defined sliding window
+      # DONE!
+      eventConsumerBufferSize: 10
+
+
+

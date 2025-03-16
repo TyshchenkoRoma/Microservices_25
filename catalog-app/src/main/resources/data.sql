@@ -1,3 +1,5 @@
+
+
 DROP TABLE IF EXISTS product;
 
 CREATE TABLE product (
@@ -21,15 +23,17 @@ DROP TABLE IF EXISTS inventory;
 
 create table inventory
 (
---     id                     int primary key,
     uniq_id                varchar(200) ,
---    sku                    varchar(1000) ,
     available              boolean
 );
 
-
+/*move file to .data
+*/
 COPY product
-    FROM '/tmp/file.csv'
+    FROM 'file.csv'
     WITH (FORMAT CSV, HEADER true, DELIMITER ',');
+
+\copy my_table FROM '/tmp/file.csv' DELIMITER ',' CSV HEADER;
+
 
 SELECT * FROM product LIMIT 10;

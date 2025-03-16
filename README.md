@@ -46,5 +46,9 @@ Make code review to ensure implementation quality within the scope of the projec
 Questions on implementation to make sure that trainee understands how Gateway,
 Configuration server and registration service work in the capstone application.
 
+./prometheus --config.file=prometheus.yml
+brew services start grafana
+
+22108
 
 

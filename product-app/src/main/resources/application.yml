@@ -17,7 +17,7 @@ resilience4j.circuitbreaker:
     default:
       registerHealthIndicator: true
       slidingWindowSize: 5
-      minimumNumberOfCalls: 10  # defines the minimum number of requests required before the Circuit Breaker starts calculating the failure rate.
+      minimumNumberOfCalls: 5  # defines the minimum number of requests required before the Circuit Breaker starts calculating the failure rate.
 # DONE!
 #      record-exceptions: # to identify which exceptions to record as failures.
 #        - java.io.IOException
@@ -27,8 +27,8 @@ resilience4j.circuitbreaker:
 
       permittedNumberOfCallsInHalfOpenState: 5
       automaticTransitionFromOpenToHalfOpenEnabled: true
-      waitDurationInOpenState: 5s
-      failureRateThreshold: 20  #  The Circuit Breaker opens if 50% or more of the requests fail within the defined sliding window
+      waitDurationInOpenState: 20s
+      failureRateThreshold: 50  #  The Circuit Breaker opens if 50% or more of the requests fail within the defined sliding window
       # DONE!
       eventConsumerBufferSize: 10
 
